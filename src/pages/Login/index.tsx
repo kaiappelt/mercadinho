@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import {
-    Container,
+  Container,
   Titulo,
   InputContainer
 } from './styles';
@@ -13,38 +13,37 @@ import {
 function Login() {
   return (
     <Container>
-    <Titulo>
+      <Titulo>
       Insira o seu nome
-    </Titulo>
-    <InputContainer>
-      <InputLabel>
+      </Titulo>
+      <InputContainer>
+        <InputLabel>
         Nome
-      </InputLabel>
-      <Input
-        type="text"
-      />
-    </InputContainer>
-    <InputContainer>
-      <InputLabel>
+        </InputLabel>
+        <Input
+          type="text"
+        />
+      </InputContainer>
+      <InputContainer>
+        <InputLabel>
         Saldo
-      </InputLabel>
-      <Input
-      type="number"
-      startAdornment={
-        <InputAdornment position="start">
+        </InputLabel>
+        <Input
+          type="number"
+          startAdornment={
+            <InputAdornment position="start">
           R$
-        </InputAdornment>
-      }
-    />
-    </InputContainer>
-    <Button
-      variant="contained"
-      color="primary"
-    >
+            </InputAdornment>
+          }
+        />
+      </InputContainer>
+      <Button
+        variant="contained"
+        color="primary"
+      >
       Avançar
-    </Button>
-  </Container>
-    )
-};
-
+      </Button>
+    </Container>
+  );
+}
 export default Login;

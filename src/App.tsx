@@ -1,9 +1,8 @@
 import { ThemeProvider, createTheme } from '@mui/material';
 import StyledEngineProvider from '@mui/material/StyledEngineProvider';
 import React from 'react';
-import ReactDOM from 'react-dom';
-
 import {Router} from './router';
+import ReactDOM from 'react-dom';
 import './index.css';
 
 const theme = createTheme({
@@ -15,7 +14,7 @@ const theme = createTheme({
       main: '#FF7070'
     },
   }
-})
+});
 
 ReactDOM.render(
   <React.StrictMode>

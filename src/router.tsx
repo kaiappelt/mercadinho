@@ -10,22 +10,22 @@ export function Router() {
   return (
     <BrowserRouter>
       <Routes>
-          <PagamentoProvider>
-             <UsuarioProvider> 
-              <Route path='/'>
-                <Login />
+        <PagamentoProvider>
+          <UsuarioProvider> 
+            <Route path='/login'>
+              <Login />
+            </Route>
+            <CarrinhoProvider> 
+              <Route path="/feira">
+                <Feira />
               </Route>
-               <CarrinhoProvider> 
-                <Route path="/feira">
-                  <Feira />
-                </Route>
-                <Route path="/carrinho">
-                  <Carrinho />
-                </Route>
-              </CarrinhoProvider>
-            </UsuarioProvider>
-          </PagamentoProvider> 
+              <Route path="/carrinho">
+                <Carrinho />
+              </Route>
+            </CarrinhoProvider>
+          </UsuarioProvider>
+        </PagamentoProvider> 
       </Routes>
     </BrowserRouter>
-  )
-};
+  );
+}

@@ -25,5 +25,5 @@ export default function NavBar() {
         </Badge>
       </IconButton>
     </Nav>
-  )
+  );
 }
