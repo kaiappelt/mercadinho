@@ -1,26 +1,29 @@
+import { ThemeProvider, createTheme } from '@mui/material';
+import StyledEngineProvider from '@mui/material/StyledEngineProvider';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from 'react-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import {Router} from './router';
+import './index.css';
 
-export default App;
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#2A9F85'
+    },
+    secondary: {
+      main: '#FF7070'
+    },
+  }
+})
+
+ReactDOM.render(
+  <React.StrictMode>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <Router />
+      </ThemeProvider>
+    </StyledEngineProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
